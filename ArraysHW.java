@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArraysHW {
+
 	public static void main(String[] args) {
 
 		// 1
@@ -61,35 +62,38 @@ public class ArraysHW {
 //			}
 //		}
 //		System.out.println(index); // 2 (after fixing a couple of errors)
-		
+
 		// 3
 		// toPower
-		
-		toPower();
+
+		// Ask the user for a index and a power
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Enter an index: ");
+		Integer index = input.nextInt();
+
+		System.out.println("Enter a power: ");
+		Integer power = input.nextInt();
+
+		toPower(index, power);
 	}
-	
-	public static void toPower() {
-		System.out.println("Hey, world!");
-		
+
+	public static Integer toPower(Integer index, Integer power) {
 		Integer answer = 1;
-		 // Ask the user for a index and a power
 		
-				Scanner input = new Scanner(System.in);
-		
-				System.out.println("Enter an index: ");
-				Integer index = input.nextInt();
-				
-				System.out.println("Enter a power: ");
-				Integer power = input.nextInt();
-				
-				System.out.println("Index: " + index);
-				System.out.println("Power: " + power);
-				
-				for (Integer i = 0; i < power; i++) {
-					answer *= index;
-				}
-				
-				System.out.println("Answer:" + answer);
+		System.out.println("Hey, world!");
+
+		System.out.println("Index: " + index);
+		System.out.println("Power: " + power);
+
+		for (Integer i = 0; i < power; i++) {
+			answer *= index;
+		}
+
+		System.out.println("Answer:" + answer);
+
+		return answer;
 	}
-	
+
 }
